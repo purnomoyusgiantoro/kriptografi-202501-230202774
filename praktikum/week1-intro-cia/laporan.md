@@ -1,9 +1,9 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Topik: kriptograpi
+Nama: purnomo Yusgiantoro 
+NIM: 230202774
+Kelas: 5ikra
 
 ---
 
