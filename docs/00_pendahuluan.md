@@ -8,7 +8,7 @@ Dokumen ini merupakan panduan umum pelaksanaan praktikum mata kuliah **Kriptogra
 
 ---
 
-## Tata Cara Praktikum  
+## Tata Cara Praktikum   
 1. **Sistem Praktikum Bertumbuh**  
    - Praktikum dilaksanakan selama 16 minggu.  
    - Setiap minggu mahasiswa menyelesaikan tugas berbasis topik yang membangun keterampilan secara bertahap, mulai dari cipher klasik hingga implementasi cryptocurrency (TinyCoin).  
