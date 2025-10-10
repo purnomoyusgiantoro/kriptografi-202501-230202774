@@ -1,4 +1,5 @@
 # Laporan Praktikum Kriptografi
+
 Minggu ke-: 1  
 Topik: sejarah kriptograpi  
 Nama: purnomo yusgiantoro  
@@ -6,6 +7,7 @@ NIM: 230202774
 Kelas: 5ikra  
 
 ---
+![Setup GitHub](screenshots/repo_setup.png)
 
 ## 1. Tujuan
 
@@ -23,6 +25,7 @@ Kriptografi merupakan ilmu dan seni untuk menjaga kerahasiaan informasi dengan c
 Konsep penting dalam kriptografi adalah modular aritmetika, yaitu operasi matematika dengan sistem bilangan yang “berulang” setelah mencapai batas tertentu (modulus). Misalnya, dalam sistem modulo 26 (huruf alfabet), hasil penjumlahan 25 + 3 ≡ 2 (mod 26). Prinsip ini digunakan untuk mengubah huruf atau angka menjadi sandi dan merupakan dasar bagi algoritma seperti RSA dan Diffie–Hellman.
 
 Kriptografi modern kemudian berkembang dengan menggunakan konsep matematika kompleks dan teori kunci publik, yang memungkinkan dua pihak berkomunikasi secara aman tanpa perlu berbagi kunci rahasia terlebih dahulu. Sistem seperti RSA dan Elliptic Curve Cryptography (ECC) memanfaatkan operasi matematika seperti eksponensial modular dan kurva eliptik untuk menjaga keamanan data di dunia digital.
+
 ---
 
 ## 3. Alat dan Bahan
@@ -75,8 +78,8 @@ Hasil eksekusi program Caesar Cipher:
 - Pertanyaan 1: Claude Shannon.
 - Pertanyaan 2: rsa ecc sha256
 - Pertanyaan 3: Kriptografi klasik menggunakan satu kunci yang sama (simetris) untuk enkripsi dan dekripsi, serta diterapkan pada pesan teks manual seperti pada Caesar Cipher dan Vigenère Cipher. Sistem ini mudah dipecahkan karena masih bergantung pada pola huruf dan analisis frekuensi.
+Sebaliknya, kriptografi modern menggunakan dua kunci berbeda (asimetris), yaitu kunci publik dan privat, serta diterapkan dalam sistem komputer dan jaringan digital. Contohnya adalah algoritma AES, RSA, dan ECC, yang mengandalkan konsep matematika kompleks untuk menghasilkan keamanan yang jauh lebih kuat dibandingkan metode klasik.
 
-Sebaliknya, kriptografi modern menggunakan dua kunci berbeda (asimetris), yaitu kunci publik dan privat, serta diterapkan dalam sistem komputer dan jaringan digital. Contohnya adalah algoritma AES, RSA, dan ECC, yang mengandalkan konsep matematika kompleks untuk menghasilkan keamanan yang jauh lebih kuat dibandingkan metode klasik. 
 )
 ---
 
@@ -97,9 +100,10 @@ Contoh:
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+Merge: 638f5a4 e0c6fe5
+Author: purnomo <purnomo@purnomo-Mybook-14E>
+Date:   Fri Oct 10 16:18:15 2025 +0700
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+    Merge remote-tracking branch 'upstream/main'
+
 ```
