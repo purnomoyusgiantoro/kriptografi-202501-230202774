@@ -65,7 +65,6 @@ Tambahkan contoh nyata minimal 1 untuk tiap aspek.
   ```markdown
   ![Setup GitHub](screenshots/repo_setup.png)
   ```
-  ![Setup GitHub](screenshots/repo_setup.png)
 
 ### Langkah 4 — Quiz Singkat
 Jawab pertanyaan berikut di laporan:  
