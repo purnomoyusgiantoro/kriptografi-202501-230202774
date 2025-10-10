@@ -6,6 +6,7 @@ NIM: 230202774
 Kelas: 5ikra  
 
 ---
+![Setup GitHub](screenshots/repo_setup.png)
 
 ## 1. Tujuan
 
