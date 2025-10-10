@@ -1,5 +1,5 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
+Minggu ke-: 1  
 Topik: sejarah kriptograpi  
 Nama: purnomo yusgiantoro  
 NIM: 230202774  
