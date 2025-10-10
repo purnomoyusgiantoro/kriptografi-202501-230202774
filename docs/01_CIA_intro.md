@@ -11,7 +11,7 @@ Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
 
 ## Capaian Kegiatan
 Pada akhir sesi ini mahasiswa menghasilkan:  
-- Repositori individu GitHub `kripto-20251-<nim>` yang sudah disiapkan.  
+- Repositori individu GitHub `kripto-20251-230202774` yang sudah disiapkan.  
 - Ringkasan individu (1–2 halaman) mengenai sejarah kriptografi dan prinsip CIA.  
 - Jawaban quiz singkat tentang sejarah kriptografi & CIA.  
 - Commit pertama dengan pesan `week1-intro-cia`.  
@@ -65,6 +65,7 @@ Tambahkan contoh nyata minimal 1 untuk tiap aspek.
   ```markdown
   ![Setup GitHub](screenshots/repo_setup.png)
   ```
+  ![Setup GitHub](screenshots/repo_setup.png)
 
 ### Langkah 4 — Quiz Singkat
 Jawab pertanyaan berikut di laporan:  
