@@ -51,8 +51,16 @@ Gunakan blok kode:
 
 ```python
 # contoh potongan kode
-def encrypt(text, key):
-    return ...
+
+def encrypt(plaintext, key):
+    result = ""
+    for char in plaintext:
+        if char.isalpha():
+            shift = 65 if char.isupper() else 97
+            result += chr((ord(char) - shift + key) % 26 + shift)
+        else:
+            result += char
+    return result ...
 ```
 )
 
@@ -60,9 +68,13 @@ def encrypt(text, key):
 
 ## 6. Hasil dan Pembahasan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
+
+hasilnya ssesuai ekspekstasi code program dapat di jalankan dan menghasilkan output yang sesuai 
+
+Plaintext : 230202774 purnomo yusgiantoro
+Ciphertext: 230202774 uzwstrt dzxlnfsytwt
+Decrypted : 230202774 purnomo yusgiantoro
+
 
 Hasil eksekusi program Caesar Cipher:
 
@@ -84,7 +96,8 @@ Sebaliknya, kriptografi modern menggunakan dua kunci berbeda (asimetris), yaitu 
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+kata kata purnomo yusgiantoro berubah menajdi uzwstrt dzxlnfsytwt dan setalah di descibe kembali menjadi purnomo yusgiantoro
+
 
 ---
 
