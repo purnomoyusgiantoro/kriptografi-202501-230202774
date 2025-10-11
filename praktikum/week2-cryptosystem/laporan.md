@@ -1,20 +1,26 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 2  
+Topik: Cryptosystem (Komponen, Enkripsi & Dekripsi, Simetris & Asimetris)  
+Nama: purnomo yusgiantoro  
+NIM: 230202774  
+Kelas: 5ikra  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+
+1. Mengidentifikasi komponen dasar kriptosistem (plaintext, ciphertext, kunci,      algoritma).
+2. Menggambarkan proses enkripsi dan dekripsi sederhana.
+3. Mengklasifikasikan jenis kriptosistem (simetris dan asimetris).
+
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Cryptosystem adalah sistem kriptografi yang digunakan untuk melindungi data melalui proses enkripsi (mengubah pesan asli menjadi kode rahasia) dan dekripsi (mengembalikannya ke bentuk semula). Komponen utamanya meliputi plaintext, ciphertext, algoritma enkripsi-dekripsi, dan key sebagai kunci pengaman.
+
+Terdapat dua jenis utama cryptosystem: simetris dan asimetris. Pada sistem simetris, kunci enkripsi dan dekripsi sama, sedangkan pada sistem asimetris digunakan dua kunci berbeda — public key dan private key. Umumnya, sistem simetris lebih cepat, sementara sistem asimetris lebih aman dalam distribusi kunci.
+
 
 ---
 
@@ -65,9 +71,13 @@ Hasil eksekusi program Caesar Cipher:
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
+- Pertanyaan 1: plaintext , ciphertext, algoritma, key  
+- Pertanyaan 2: kelebihan : proses enkripsi dan dekripsi lebih cepat serta efisien dalam penggunaan sumber daya 
+kekurangan : distribusi kunci kurang aman karena pengirim dan penerima harus memiliki kunci yang sama, sehingga rawan disadap.    
+- Pertanyaan 3: Distribusi kunci menjadi masalah utama karena kunci yang sama harus dikirimkan ke pihak lain melalui saluran komunikasi. Jika kunci tersebut bocor atau disadap oleh pihak ketiga, maka seluruh sistem keamanan pesan akan terancam.  
 )
+
+
 ---
 
 ## 8. Kesimpulan
