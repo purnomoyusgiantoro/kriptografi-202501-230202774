@@ -45,27 +45,24 @@ Contoh format:
 (Salin kode program utama yang dibuat atau dimodifikasi.  
 Gunakan blok kode:
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+```def caesar_encrypt(text, key):
+    shift = key % 26
+    res = []
+    for ch in text:
+        if 'a' <= ch <= 'z':
+            res.append(chr((ord(ch) - 97 + shift) % 26 + 97))
+        elif 'A' <= ch <= 'Z':
+            res.append(chr((ord(ch) - 65 + shift) % 26 + 65))
+        else:
+            res.append(ch)
+    return "".join(res) ...
 ```
 )
 
 ---
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+![Diagram Kriptosistem](screenshots/diagram_kriptosistem.png)
 
 ---
 
