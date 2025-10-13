@@ -94,9 +94,9 @@ Contoh:
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+commit 2ea82d85ecdc19fd26966a62142c275a98578603
+Author: purnomo <purnomo@purnomo-Mybook-14E>
+Date:   Sat Oct 11 16:17:18 2025 +0700
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+    week2-cryptosystem
 ```
