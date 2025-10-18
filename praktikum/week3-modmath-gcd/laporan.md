@@ -1,21 +1,28 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 3  
+Topik:Modular Math (Aritmetika Modular, GCD, Bilangan Prima, Logaritma Diskrit) 
+Nama: purnomo yusgiantoro  
+NIM: 2302020774  
+Kelas: 5ikra   
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+
+   1 Menyelesaikan operasi aritmetika modular.
+   2 Menentukan bilangan prima dan menghitung GCD (Greatest Common Divisor).
+   3 Menerapkan logaritma diskrit sederhana dalam simulasi kriptografi.
+
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 
+Aritmetika modular adalah cara menghitung dengan sisa pembagian. Misalnya setelah hasil operasi, nilainya dikembalikan ke sisa tertentu agar tetap dalam batas yang ditentukan.
+
+Algoritma Euclidean digunakan untuk mencari pembagi terbesar dari dua angka (GCD). Cara kerjanya dengan membagi berulang sampai sisa pembagiannya nol.
+
+Bilangan prima adalah bilangan yang hanya bisa dibagi oleh 1 dan dirinya sendiri. Logaritma diskrit adalah proses mencari pangkat dari suatu bilangan agar hasilnya sama dengan bilangan lain pada sistem modular.
 ---
 
 ## 3. Alat dan Bahan
@@ -65,13 +72,14 @@ Hasil eksekusi program Caesar Cipher:
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
+- Pertanyaan 1:Aritmetika modular menjadi dasar hampir semua algoritma kriptografi modern. Sistem ini memastikan setiap hasil perhitungan tetap berada dalam rentang bilangan tertentu tanpa meluap, sehingga aman dan efisien digunakan pada komputer. Dalam kriptografi, operasi seperti enkripsi dan dekripsi dilakukan dengan perkalian atau perpangkatan dalam sistem modular, yang membuat hasilnya sulit ditebak meskipun diketahui sebagian informasi.  
+- Pertanyaan 2:Invers modular dipakai untuk menemukan kunci dekripsi dalam sistem RSA. Setelah memilih dua bilangan prima dan menghasilkan nilai publik e, kita perlu mencari bilangan yang menjadi invers modular dari e terhadap p−1)(q−1)itulah pesan bisa didekripsi kembali. Tanpa invers modular, proses membuka pesan terenkripsi menjadi tidak mungkin dilakukan.
+- Pertanyaan 3:Tantangan utamanya adalah tingkat kesulitannya meningkat sangat cepat ketika modulus menjadi besar. Tidak ada algoritma efisien yang bisa menyelesaikan logaritma diskrit dengan cepat untuk bilangan besar (misalnya ratusan digit)  
 )
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+Berdasarkan percobaan, dapat disimpulkan bahwa operasi aritmetika modular seperti penjumlahan, perkalian, dan perpangkatan dapat dihitung dengan mudah menggunakan fungsi modular di Python. Algoritma Euclidean mampu menentukan GCD secara efisien, sedangkan algoritma Euclidean yang diperluas dapat digunakan untuk mencari invers modular. Selain itu, simulasi logaritma diskrit menunjukkan bagaimana nilai pangkat dapat ditemukan dalam sistem modular, yang menjadi dasar penting dalam kriptografi modern.
 
 ---
 
