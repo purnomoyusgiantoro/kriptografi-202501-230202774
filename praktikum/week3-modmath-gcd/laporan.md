@@ -23,6 +23,7 @@ Aritmetika modular adalah cara menghitung dengan sisa pembagian. Misalnya setela
 Algoritma Euclidean digunakan untuk mencari pembagi terbesar dari dua angka (GCD). Cara kerjanya dengan membagi berulang sampai sisa pembagiannya nol.
 
 Bilangan prima adalah bilangan yang hanya bisa dibagi oleh 1 dan dirinya sendiri. Logaritma diskrit adalah proses mencari pangkat dari suatu bilangan agar hasilnya sama dengan bilangan lain pada sistem modular.
+
 ---
 
 ## 3. Alat dan Bahan
