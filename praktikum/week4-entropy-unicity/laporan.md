@@ -1,20 +1,30 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 4  
+Topik: Entropy & Unicity Distance (Evaluasi Kekuatan Kunci dan Brute Force)  
+Nama: purnomo yusgiatoro  
+NIM: 230202774  
+Kelas: 5ikra  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
+
+   1. Menyelesaikan perhitungan sederhana terkait entropi kunci.
+   2. Menggunakan teorema Euler pada contoh perhitungan modular & invers.
+   3. Menghitung unicity distance untuk ciphertext tertentu.
+   4. Menganalisis kekuatan kunci berdasarkan entropi dan unicity distance.
+   5. Mengevaluasi potensi serangan brute force pada kriptosistem sederhana.
+
+
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Entropy adalah ukuran tingkat ketidakpastian atau kerandoman dalam sebuah sistem kriptografi. Semakin tinggi nilai entropi sebuah kunci, semakin sulit kunci tersebut ditebak karena distribusi bit-nya semakin acak. Dalam konteks keamanan, entropi digunakan untuk menilai seberapa kuat kunci terhadap serangan brute force—semakin tinggi entropinya, semakin besar ruang kunci yang harus dicoba penyerang untuk menemukan kunci yang benar.
+
+Unicity Distance adalah jumlah minimum ciphertext yang dibutuhkan agar kunci dapat diidentifikasi secara unik. Konsep ini menggambarkan batas di mana informasi dalam ciphertext cukup untuk menyingkirkan semua kemungkinan kunci palsu. Semakin panjang unicity distance, semakin kuat sistem kriptografi karena penyerang membutuhkan lebih banyak data terenkripsi untuk memecahkan kunci secara pasti melalui brute force atau analisis statistik.
+
 
 ---
 
@@ -39,10 +49,13 @@ Contoh format:
 (Salin kode program utama yang dibuat atau dimodifikasi.  
 Gunakan blok kode:
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+```import math
+
+def entropy(keyspace_size):
+    return math.log2(keyspace_size)
+
+print("Entropy ruang kunci 26 =", entropy(26), "bit")
+print("Entropy ruang kunci 2^128 =", entropy(2**128), "bit") ...
 ```
 )
 
@@ -65,13 +78,16 @@ Hasil eksekusi program Caesar Cipher:
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
+- Pertanyaan 1: Entropy menunjukkan tingkat kerandoman kunci — semakin tinggi entropinya, semakin sulit kunci ditebak
+- Pertanyaan 2: Unicity distance penting karena menentukan berapa banyak ciphertext yang dibutuhkan untuk memastikan kunci dapat dipecahkan secara unik.
+- Pertanyaan 3: Brute force tetap ancaman karena jika panjang kunci lemah atau implementasi buruk, penyerang bisa mencoba semua kemungkinan hingga menemukan kunci yang benar.
 )
+
+
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+Dari hasil eksekusi kode, dapat disimpulkan bahwa ruang kunci kecil seperti pada Caesar Cipher (26 kunci) memiliki entropi rendah dan unicity distance pendek, sehingga mudah dipecahkan dengan brute force hanya dalam waktu sangat singkat. Sebaliknya, algoritma modern seperti AES-128 memiliki entropi sangat tinggi dan unicity distance besar, membuatnya hampir mustahil dipecahkan dengan brute force karena membutuhkan waktu yang jauh melebihi umur alam semesta.
 
 ---
 
