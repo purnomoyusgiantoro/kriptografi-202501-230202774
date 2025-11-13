@@ -1,37 +1,38 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 7  
+Topik: Diffie-Hellman Key Exchange  
+Nama: PUrnomo Yusgiantoro  
+NIM: 230202774  
+Kelas: 5ikra  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Melakukan simulasi protokol Diffie-Hellman untuk pertukaran kunci publik.
+Menjelaskan mekanisme pertukaran kunci rahasia menggunakan bilangan prima dan logaritma diskrit.
+Menganalisis potensi serangan pada protokol Diffie-Hellman (termasuk serangan Man-in-the-Middle / MITM).
+
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Diffie–Hellman adalah protokol untuk menghasilkan shared secret antara dua pihak melalui saluran publik. Secara matematis, protokol memakai sebuah bilangan prima p dan sebuah generator g dari grup perkalian modulo p. Dua pihak, sebut saja Alice dan Bob, masing-masing memilih bilangan privat a dan b. Alice menghitung nilai publik A = g^a mod p dan mengirimkan A kepada Bob. Bob menghitung nilai publik B = g^b mod p dan mengirimkan B kepada Alice.
+
+Setelah pertukaran, Alice menggunakan B dan kunci privatnya a untuk menghitung shared secret s = B^a mod p. Bob menggunakan A dan kunci privatnya b untuk menghitung s = A^b mod p. Karena sifat perpangkatan modulo, kedua perhitungan identik: s = g^(a b) mod p. Dengan kata lain:
+A = g^a mod p
+B = g^b mod p
+s = B^a mod p = A^b mod p = g^(a b) mod p
+
+Shared secret s biasanya bukan langsung dipakai sebagai kunci enkripsi; s dikonversi menjadi kunci simetris yang aman melalui fungsi derivasi kunci (KDF), misalnya k = KDF(s) atau k = H(s) dengan hash seperti SHA-256.
+
+Keamanan DH bergantung pada kesulitan masalah logaritma diskrit: diberi g dan g^x mod p, sulit (untuk p yang besar) menebak x. Namun DH sendiri tidak mengautentikasi lawan bicara. Ancaman paling nyata adalah Man-in-the-Middle (MITM): penyerang Mallory mengintersep A dan B dan menggantinya dengan A' dan B' yang dibuat Mallory. Akibatnya Alice menghitung shared secret dengan Mallory (bukan dengan Bob), dan Bob juga menghitung secret berbeda dengan Mallory. Mallory bisa menghitung kedua secret sehingga dapat membaca/memodifikasi pesan.
+
 
 ---
 
-## 3. Alat dan Bahan
-(- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
 
 ---
 
-## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
 
 ---
 
