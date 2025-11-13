@@ -37,42 +37,39 @@ Keamanan DH bergantung pada kesulitan masalah logaritma diskrit: diberi g dan g^
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+```p = 23  # bilangan prima
+g = 5   # generator
+
+# private key masing-masing pihak
+a = random.randint(1, p-1)  # secret Alice
+b = random.randint(1, p-1)  # secret Bob
+ ...
 ```
 )
 
----
-
-## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
 
 ---
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
+- Pertanyaan 1: Karena Diffie–Hellman menggunakan operasi matematika berupa perpangkatan modular dengan bilangan prima besar, yang didasarkan pada kesulitan logaritma diskrit.Hanya pihak yang memiliki eksponen rahasia masing-masing yang dapat menghitung shared secret
+- Pertanyaan 2: Kelemahan utama protokol Diffie–Hellman murni adalah tidak adanya autentikasi. Protokol ini hanya menjamin bahwa dua pihak dapat menghasilkan kunci yang sama, tetapi tidak dapat memastikan dengan siapa mereka berkomunikasi. Akibatnya, penyerang dapat menyusup di tengah komunikasi dan melakukan serangan Man-in-the-Middle (MITM) dengan berpura-pura menjadi pihak yang sah bagi kedua belah pihak.
+- Pertanyaan 3: Menggunakan sertifikat digital dan Public Key Infrastructure (PKI) untuk memverifikasi identitas pihak yang berkomunikasi, Menandatangani nilai publik Diffie–Hellman, Menggunakan Ephemeral Diffie–Hellman (DHE/ECDHE) agar setiap sesi memiliki kunci sementara (session key) baru.
+
+
 )
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+
+Protokol Diffie–Hellman merupakan dasar penting dalam sistem kriptografi modern untuk pertukaran kunci rahasia melalui saluran publik tanpa harus mengirimkan kunci secara langsung. Mekanisme ini memanfaatkan konsep perpangkatan modular dan kesulitan logaritma diskrit sehingga sangat sulit bagi pihak ketiga untuk menebak kunci rahasia yang dihasilkan.
+
+Namun, kelemahan utama Diffie–Hellman adalah tidak adanya proses autentikasi, sehingga rentan terhadap serangan *Man-in-the-Middle (MITM)* apabila nilai publik dapat dimodifikasi oleh penyerang. Oleh karena itu, penerapan autentikasi tambahan seperti tanda tangan digital atau sertifikat digital sangat diperlukan agar komunikasi benar-benar aman.
+
+Dengan penggunaan parameter bilangan prima yang besar, penerapan *ephemeral key* (kunci sementara per sesi), dan penggabungan dengan protokol keamanan seperti TLS atau ECDHE, Diffie–Hellman mampu memberikan kerahasiaan, integritas, dan keamanan komunikasi yang kuat dalam berbagai aplikasi kriptografi modern.
+
+
 
 ---
 
@@ -85,12 +82,10 @@ Contoh:
 ---
 
 ## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+```
+Author: purnomo yusgiantoro <pyxvin124@gmail.com>
+Date:   Thu Nov 13 23:53:51 2025 +0700
+
+    week7-diffie-hellman
 ```
