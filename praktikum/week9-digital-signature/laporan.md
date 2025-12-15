@@ -21,7 +21,6 @@ Digital Signature merupakan mekanisme kriptografi yang digunakan untuk menjamin 
 ---
 
 
-
 ## 5. Source Code
 (Salin kode program utama yang dibuat atau dimodifikasi.  
 Gunakan blok kode:
