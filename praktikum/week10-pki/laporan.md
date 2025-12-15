@@ -57,7 +57,6 @@ PKI memastikan sertifikat server valid dan terpercaya, sehingga klien dapat memv
 Program berhasil membuat sertifikat digital self-signed menggunakan algoritma RSA dan hash SHA-256, yang menunjukkan konsep dasar kerja Public Key Infrastructure (PKI). Sertifikat yang dihasilkan mengaitkan identitas subjek dengan kunci publik secara kriptografis dan dapat digunakan untuk keperluan pengujian atau pembelajaran. Peringatan eprecation menunjukkan bahdwa praktik pengelolaan waktu perlu diperbarui ke format timezone-aware, namun tidak memengaruhi keberhasilan pembuatan sertifikat secara fungsional.
 
 
-
 ---
 
 ## 10. Commit Log
