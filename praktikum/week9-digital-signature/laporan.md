@@ -1,85 +1,70 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 9
+Topik: Digital Signature (RSA/DSA)
+Nama: purnomo yusgiantoro
+NIM: 230202774
+Kelas: 5ikra
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
 
----
+    Mengimplementasikan tanda tangan digital menggunakan algoritma RSA/DSA.
+    Memverifikasi keaslian tanda tangan digital.
+    Menjelaskan manfaat tanda tangan digital dalam otentikasi pesan dan integritas data.
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Digital Signature merupakan mekanisme kriptografi yang digunakan untuk menjamin keaslian (authentication) keutuhan data (integrity), dan non-repudiation pada suatu pesan atau dokumen digital. Algoritma digital signature yang umum digunakan adalah RSA dan DSA, yang keduanya berbasis kriptografi kunci publik. Pada proses penandatanganan, pengirim membuat tanda tangan digital dengan menggunakan kunci privat, sedangkan penerima memverifikasinya menggunakan kunci publik. RSA digital signature bekerja dengan melakukan operasi matematika eksponensial modular pada nilai hash pesan, sementara DSA menggunakan konsep logaritma diskrit dan bilangan acak dalam proses pembuatannya. Dengan penerapan digital signature berbasis RSA atau DSA, keamanan komunikasi digital dapat ditingkatkan karena pesan yang dikirim tidak dapat diubah tanpa terdeteksi dan identitas pengirim dapat dipastikan secara kriptografis.
+
 
 ---
 
-## 3. Alat dan Bahan
-(- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
 
----
-
-## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
-
----
 
 ## 5. Source Code
 (Salin kode program utama yang dibuat atau dimodifikasi.  
 Gunakan blok kode:
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+```from Crypto.PublicKey import RSA
+from Crypto.Signature import pkcs1_15
+from Crypto.Hash import SHA256
+
+# Generate pasangan kunci RSA
+key = RSA.generate(2048)
+private_key = key
+public_key = key.publickey()
+
+# Pesan yang akan ditandatangani
+message = b"Hello, ini pesan penting."
+h = SHA256.new(message)
+
+# Buat tanda tangan dengan private key
+signature = pkcs1_15.new(private_key).sign(h)
+print("Signature:", signature.hex())
+
+
 ```
-)
 
 ---
 
-## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
-
----
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
+1. Perbedaan enkripsi RSA dan tanda tangan digital RSA
+Enkripsi RSA bertujuan menjaga kerahasiaan pesan dengan menggunakan kunci publik penerima, sedangkan tanda tangan digital RSA bertujuan menjamin keaslian dan integritas pesan dengan menggunakan kunci privat pengirim.
+
+2. Alasan tanda tangan digital menjamin integritas dan otentikasi
+Karena tanda tangan dibuat dari hash pesan dan hanya dapat dibuat oleh pemilik kunci privat, sehingga perubahan pesan dapat terdeteksi dan identitas pengirim dapat dipastikan.
+
+3. Peran Certificate Authority (CA)
+CA adalah pihak tepercaya yang memverifikasi identitas dan menerbitkan sertifikat digital untuk memastikan kunci publik benar-benar milik pemilik yang sah.
+
+
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+Berdasarkan hasil pengujian, tanda tangan digital RSA berhasil dibuat menggunakan kunci privat dan dapat diverifikasi dengan benar menggunakan kunci publik selama pesan tidak mengalami perubahan. Verifikasi yang berhasil membuktikan bahwa pesan asli memiliki integritas terjaga dan benar berasal dari pemilik kunci privat. Ketika pesan dimodifikasi, proses verifikasi gagal, yang menunjukkan bahwa tanda tangan digital mampu mendeteksi perubahan data dan memastikan keaslian pesan, sehingga efektif untuk menjamin keamanan dan kepercayaan dalam komunikasi digital.
 
----
-
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
 
 ---
 
