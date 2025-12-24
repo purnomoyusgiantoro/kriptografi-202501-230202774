@@ -37,12 +37,6 @@ def encrypt(text, key):
 - Jelaskan apakah hasil sesuai ekspektasi.  
 - Bahas error (jika ada) dan solusinya. 
 
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
 
 ---
 
@@ -61,7 +55,8 @@ individu dan kebutuhan negara untuk melakukan pengawasan demi keamanan publik.
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+
+Pada praktikum ini dapat disimpulkan bahwa TLS memiliki peran yang sangat penting dalam menjaga keamanan komunikasi dan transaksi pada sistem e-commerce melalui mekanisme enkripsi dan autentikasi. Selain itu, konsep Shamir Secret Sharing menunjukkan bahwa pembagian rahasia ke beberapa pihak dengan ambang batas tertentu dapat meningkatkan keamanan penyimpanan dan distribusi data sensitif. Penerapan kriptografi secara tepat mampu melindungi privasi pengguna sekaligus menjaga kepercayaan dalam aktivitas digital, meskipun tetap menimbulkan tantangan dari sisi hukum dan etika.
 
 ---
 
