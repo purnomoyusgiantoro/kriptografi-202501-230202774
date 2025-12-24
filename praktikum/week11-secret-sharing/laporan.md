@@ -71,7 +71,11 @@ Shamir Secret Sharing sangat bermanfaat dalam pengelolaan kunci privat dompet kr
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+**Kesimpulan singkat:**
+
+Shamir’s Secret Sharing memungkinkan satu rahasia dipecah menjadi beberapa bagian (shares) sehingga rahasia hanya bisa dibuka jika jumlah minimum shares terpenuhi.
+Pada contoh di atas, rahasia diubah ke format HEX, lalu dibagi menjadi 5 shares dengan ambang batas 3. Artinya, **minimal 3 shares diperlukan untuk mengembalikan rahasia asli, sementara 1 atau 2 shares saja tidak berguna.
+Metode ini meningkatkan keamanan dan keandalan penyimpanan kunci rahasia, dan banyak digunakan dalam kriptografi, blockchain, dan sistem keamanan tingkat lanjut.
 
 ---
 
