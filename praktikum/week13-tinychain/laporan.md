@@ -73,9 +73,10 @@ Kesimpulannya, mekanisme difficulty dalam Proof of Work menjamin keamanan blockc
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+commit 3f7ebf59f5b28210798a7d22aaaa5f468634cda4 (HEAD -> main)
+Author: purnomo yusgiantoro <pyxvin124@gmail.com>
+Date:   Sat Jan 3 19:15:12 2026 +0700
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+    week13-tinychain
+
 ```
