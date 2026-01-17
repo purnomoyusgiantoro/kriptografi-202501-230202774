@@ -1,91 +1,96 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 15 
+Topik: Proyek Kelompok – TinyCoin ERC20 (MELODIA)
+Nama: purnomo yusgiantoro
+NIM: 230202774
+Kelas: 5ikra
 
 ---
 
+## Projek kelompok
+
+https://github.com/purnomoyusgiantoro/melodia
+
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+
+    Mengembangkan proyek sederhana berbasis algoritma kriptografi.
+    Mendokumentasikan proses implementasi proyek ke dalam repository Git.
+    Menyusun laporan teknis hasil proyek akhir.
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 
----
+Blockchain merupakan teknologi buku besar terdistribusi (distributed ledger) yang memungkinkan pencatatan transaksi secara transparan, aman, dan tidak dapat diubah tanpa memerlukan pihak ketiga. Setiap transaksi diverifikasi oleh jaringan dan disimpan dalam blok yang saling terhubung menggunakan kriptografi. Karakteristik utama blockchain seperti desentralisasi, imutabilitas, dan transparansi menjadikannya cocok untuk sistem keuangan digital dan pengelolaan aset berbasis kepercayaan.
 
-## 3. Alat dan Bahan
-(- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
+Smart contract adalah program yang berjalan di atas blockchain dan dieksekusi secara otomatis ketika kondisi tertentu terpenuhi. Pada ekosistem Ethereum dan jaringan kompatibel EVM, smart contract ditulis menggunakan bahasa Solidity dan memungkinkan implementasi logika bisnis tanpa perantara. Standar ERC-20 digunakan untuk menciptakan token fungible yang seragam, sehingga token dapat dengan mudah diintegrasikan dengan wallet, decentralized exchange (DEX), dan aplikasi Web3 lainnya.
 
----
-
-## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
+Dalam konteks tokenisasi aset, blockchain dan smart contract memungkinkan representasi kepemilikan aset dunia nyata (Real World Assets/RWA) secara digital. Token ERC-20 dapat digunakan untuk membagi kepemilikan aset menjadi unit yang lebih kecil, meningkatkan likuiditas, dan memperluas akses investor. Pendekatan ini mendukung model bisnis baru yang lebih transparan, efisien, dan terdesentralisasi, khususnya pada industri kreatif seperti musik.
 
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+```    event RequestSubmitted(uint256 indexed requestId, address indexed creator);
+    event RequestApproved(uint256 indexed requestId, uint256 indexed tokenId);
+
+    constructor() ERC721("Music IP NFT", "MIPNFT") Ownable(msg.sender) {
+        tokenCounter = 0;
+        requestCounter = 0; ...
 ```
 )
 
 ---
 
-## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
+## 7. Jawaban Pertanyaan
 
-Hasil eksekusi program Caesar Cipher:
+### 1. Fungsi Utama ERC-20 dalam Ekosistem Blockchain
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+ERC-20 adalah standar token fungible pada blockchain berbasis EVM.
+Fungsi utamanya meliputi:
+
+* Standarisasi pembuatan token agar kompatibel dengan wallet, DEX, dan dApp
+* Media pertukaran dan alat pembayaran digital
+* Representasi kepemilikan aset (utility, governance, atau RWA)
+* Mendukung interoperabilitas antar aplikasi blockchain
 
 ---
 
-## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
+### 2. Mekanisme Transfer Token ERC-20
+
+Transfer token ERC-20 bekerja melalui pencatatan saldo berbasis `mapping`.
+
+* **`transfer`**
+  Mengirim token langsung dari pemilik ke penerima
+
+* **`approve` + `transferFrom`**
+  Memberi izin pihak ketiga (smart contract) untuk memindahkan token
+
+Setiap transfer akan memicu event `Transfer` yang digunakan oleh wallet dan blockchain explorer untuk pelacakan transaksi.
+
+---
+
+### 3. Risiko Smart Contract dan Mitigasi
+
+| Risiko               | Mitigasi                                     |
+| -------------------- | -------------------------------------------- |
+| Bug & logic error    | Gunakan OpenZeppelin, testing, code review   |
+| Reentrancy           | ReentrancyGuard, checks-effects-interactions |
+| Access control lemah | Ownable / AccessControl                      |
+| Front-running        | Slippage limit, commit–reveal                |
+| Dependensi eksternal | Validasi data & trusted oracle               |
+
+
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+Pemanfaatan teknologi blockchain dan smart contract memungkinkan pengelolaan aset digital yang lebih transparan, aman, dan terdesentralisasi. Dengan menerapkan standar ERC-20 dan jaringan berbasis EVM, proses tokenisasi kepemilikan dapat dilakukan secara efisien tanpa perantara. Pendekatan ini membuka peluang inovasi dalam pengelolaan dan distribusi nilai aset, khususnya pada industri kreatif, dengan meningkatkan kepercayaan, aksesibilitas, dan likuiditas bagi seluruh pihak yang terlibat.
 
 ---
 
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
-
----
 
 ## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
+
 ```
 commit abc12345
 Author: Nama Mahasiswa <email>
