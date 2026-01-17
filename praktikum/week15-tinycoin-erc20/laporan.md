@@ -92,9 +92,10 @@ Pemanfaatan teknologi blockchain dan smart contract memungkinkan pengelolaan ase
 ## 10. Commit Log
 
 ```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+commit f57bef5845a386ad1a1376441548142604eec0d2 (HEAD -> main)
+Author: purnomo yusgiantoro <pyxvin124@gmail.com>
+Date:   Sat Jan 17 22:13:31 2026 +0700
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+    week15-tinycoin-erc20 (MELODIA)
+
 ```
