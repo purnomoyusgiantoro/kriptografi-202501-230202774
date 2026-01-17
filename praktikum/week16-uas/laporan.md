@@ -7,7 +7,10 @@ Kelas: 5IKRA
 # 🎵 Melodia – Decentralized Music Royalty Platform
 
 <p align="center">
-  <img src="frontend/public/melodia_logo.png" width="200" />
+  <img src="screenshot/melodia_logo.jpeg" width="200" />
+</p>
+<p align="center">
+  <img src="screenshot/melodia.png" width="200" />
 </p>
 
 **Melodia** adalah platform Web3 untuk **tokenisasi royalti musik** yang memungkinkan musisi menjual kepemilikan royalti lagu kepada fans dan investor secara transparan menggunakan **blockchain Mantle Network (L2)**.
