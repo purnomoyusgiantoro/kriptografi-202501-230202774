@@ -1,8 +1,8 @@
-Minggu ke-: 16 UAS
-Topik: Laporan Projek
-Nama: Purnomo Yusgiantoro
-NIM: 23020774
-Kelas: 5IKRA
+* Minggu ke-: 16 UAS
+* Topik: Laporan Projek
+* Nama: Purnomo Yusgiantoro
+* NIM: 23020774
+* Kelas: 5IKRA
 
 # 🎵 Melodia – Decentralized Music Royalty Platform
 
@@ -10,12 +10,23 @@ Kelas: 5IKRA
   <img src="screenshot/melodia_logo.jpeg" width="200" />
 </p>
 <p align="center">
-  <img src="screenshot/melodia.png" width="200" />
+  <img src="screenshot/melodia.png" width="600" />
 </p>
 
 **Melodia** adalah platform Web3 untuk **tokenisasi royalti musik** yang memungkinkan musisi menjual kepemilikan royalti lagu kepada fans dan investor secara transparan menggunakan **blockchain Mantle Network (L2)**.
 
 🌐 **Live Demo**: [https://melodia-eth.netlify.app](https://melodia-eth.netlify.app)
+
+
+## 🎥 Demo Video
+
+https://github.com/purnomoyusgiantoro/kriptografi-202501-230202774/blob/main/praktikum/week16-uas/Video/demo.mp4
+
+
+## 🎥 Demo Video
+
+()
+
 
 ---
 
@@ -211,8 +222,8 @@ GitHub: [https://github.com/purnomoyusgiantoro](https://github.com/purnomoyusgia
 ## 🔗 Links
 
 * 🌐 Live Demo: [https://melodia-eth.netlify.app](https://melodia-eth.netlify.app)
-* 📦 GitHub Repository: [https://github.com/your-username/melodia](https://github.com/your-username/melodia)
-  *(Update with official repo link)*
+* 📦 GitHub Repository: [https://github.com/your-username/melodia](https://github.com/purnomoyusgiantoro/melodia)
+
 
 ---
 
